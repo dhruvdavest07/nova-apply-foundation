@@ -1,0 +1,6 @@
+# config/profiles.json
+{
+  "active_profiles": [],
+  "test_profiles": [],
+  "profiles": {}
+}

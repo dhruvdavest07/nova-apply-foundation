@@ -1,0 +1,75 @@
+# profiles/template_profile.json
+{
+  "profile_id": "profile_001",
+  "candidate": {
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "phone": "",
+    "location": {
+      "city": "",
+      "state": "",
+      "country": "United States",
+      "willing_to_relocate": true,
+      "preferred_locations": ["Remote", "Anywhere USA"]
+    },
+    "linkedin_url": "",
+    "portfolio_url": "",
+    "github_url": ""
+  },
+  "resume": {
+    "file_path": "",
+    "summary": "",
+    "skills": {
+      "technical": [],
+      "soft": [],
+      "tools": [],
+      "languages": []
+    },
+    "experience": [
+      {
+        "title": "",
+        "company": "",
+        "location": "",
+        "start_date": "",
+        "end_date": "",
+        "current": false,
+        "description": "",
+        "achievements": []
+      }
+    ],
+    "education": [
+      {
+        "degree": "",
+        "field": "",
+        "institution": "",
+        "graduation_year": 0
+      }
+    ],
+    "certifications": []
+  },
+  "preferences": {
+    "target_roles": [],
+    "target_industries": [],
+    "avoid_industries": [],
+    "job_types": ["full-time", "contract"],
+    "remote_preference": "remote-first",
+    "salary_range": {
+      "min": 0,
+      "max": 0,
+      "currency": "USD"
+    },
+    "visa_status": "No visa sponsorship required - willing to relocate anywhere USA",
+    "notice_period_days": 30,
+    "available_start": "immediately"
+  },
+  "application_settings": {
+    "daily_limit": 30,
+    "cover_letter_style": "professional-concise",
+    "auto_apply_enabled": true,
+    "manual_review_threshold": 0.7
+  },
+  "created_at": "",
+  "updated_at": "",
+  "notes": ""
+}

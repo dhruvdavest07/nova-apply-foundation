@@ -1,0 +1,111 @@
+{
+  "app_name": "Nova Apply",
+  "version": "0.1.0",
+  "environment": "development",
+  
+  "rate_limits": {
+    "api_call_delay_seconds": 5,
+    "portal_action_delay_seconds": 10,
+    "max_searches_per_batch": 5,
+    "search_batch_break_seconds": 120,
+    "max_applications_per_profile_per_day": 30
+  },
+  
+  "llm": {
+    "primary_model": "kimi-k2.5",
+    "primary_provider": "kimi",
+    "fallback_model": "gemini-flash",
+    "fallback_provider": "google",
+    "local_model": "ollama",
+    "max_tokens_matching": 2000,
+    "temperature_matching": 0.3
+  },
+  
+  "portals": {
+    "linkedin": {
+      "enabled": true,
+      "search_url": "https://www.linkedin.com/jobs/search",
+      "requires_login": true,
+      "easy_apply_only": false
+    },
+    "indeed": {
+      "enabled": true,
+      "search_url": "https://www.indeed.com/jobs",
+      "requires_login": false
+    },
+    "glassdoor": {
+      "enabled": false,
+      "search_url": "https://www.glassdoor.com/Job/jobs.htm",
+      "requires_login": true
+    },
+    "monster": {
+      "enabled": false,
+      "search_url": "https://www.monster.com/jobs/search",
+      "requires_login": false
+    },
+    "simplyhired": {
+      "enabled": false,
+      "search_url": "https://www.simplyhired.com/search",
+      "requires_login": false
+    },
+    "hiringcafe": {
+      "enabled": false,
+      "search_url": "https://hiring.cafe",
+      "requires_login": false
+    },
+    "jobright": {
+      "enabled": false,
+      "search_url": "https://jobright.ai",
+      "requires_login": true
+    }
+  },
+  
+  "search": {
+    "default_location": "United States",
+    "date_filter": "past_24_hours",
+    "remote_options": ["remote", "hybrid", "onsite"],
+    "job_types": ["fulltime", "contract"]
+  },
+  
+  "matching": {
+    "min_match_score": 0.6,
+    "high_match_threshold": 0.8,
+    "medium_match_threshold": 0.6
+  },
+  
+  "tracking": {
+    "gmail_label": "NovaApply",
+    "confirmation_keywords": [
+      "application submitted",
+      "thank you for applying",
+      "application received",
+      "we have received your application"
+    ],
+    "rejection_keywords": [
+      "not moving forward",
+      "selected another candidate",
+      "decided to move forward with other candidates"
+    ]
+  },
+  
+  "reporting": {
+    "daily_report_time": "20:00",
+    "timezone": "America/New_York",
+    "whatsapp_enabled": true
+  },
+  
+  "stealth": {
+    "human_like_delays": true,
+    "randomize_user_agent": false,
+    "use_proxies": false,
+    "proxy_list": [],
+    "captcha_solver": null
+  },
+  
+  "paths": {
+    "profiles_dir": "./profiles",
+    "memory_dir": "./memory",
+    "logs_dir": "./logs",
+    "downloads_dir": "./downloads"
+  }
+}
